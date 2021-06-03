@@ -29,7 +29,52 @@
 
         <div id="container"><!-- inicio conteudo -->
 
-                
+            <h3>Carrinho</h3>
+            <form>
+                <h3>Produto</h3>
+                <div>
+                    <img class="mr-2 align-self-center" src="../img/vinho1.jpg" width="150" height="170">
+                    <label for="produto">Vinho Vale D. Maria 750ml</label>
+                </div>
+
+                <h3>Qtd.</h3>
+                <div>
+                    <input class="campo" style="width: 35px" type="number" id="qtd" value="1"><br>
+                </div>
+
+                <h3>Valor unitário</h3>
+                <div>
+                    <label for="total">R$ 23,43</label>
+                </div>
+
+                <h3>Valor Total</h3>
+                <div>
+                    <label for="total">R$ 0,00</label>
+                </div>
+            </form>
+
+
+
+
+
+            <!-- <h3>Carrinho<h3>
+                <ul>
+                <li class="media border-bottom pb-2 pt-2">
+                    <img class="mr-2 align-self-center" src="../img/vinho1.jpg" width="200" height="200">
+                    <div class="media-body">
+                        <h5>Produto</h5>
+                        <p class="mb-0">Vinho Vale D. Maria 750ml</p>
+                    </div>
+
+                    <div class="media-body">
+                        <h5>Qtd.</h5>
+                        <p class="mb-0"></p>
+                    </div>
+                    
+                </li>
+
+                </ul>
+                 -->
 
         </div><!--/ fim conteudo -->
 
