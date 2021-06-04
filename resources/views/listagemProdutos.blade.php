@@ -11,8 +11,6 @@
         
          <!-- Bootstrap CSS -->
          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-            <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
         
         <!-- Styles -->
         <style>
@@ -81,10 +79,11 @@
 
             #logo a {
                 width: 80px;
-                height: 40px;
+                height: -100px;
                 display: block;
                 text-align: center;
                 font-size:30px;
+                padding:30px
             }
 
             header{
@@ -136,7 +135,7 @@
             <header><!--inicio header-->
                     
                 <div id="logo">
-                    <h1><a href="">Loja de Vinhos</a></h1>
+                    <h1><a href="">Vinhos</a></h1>
                 </div>
 
                 <nav><!--inicio nav-->
@@ -154,7 +153,7 @@
             <div id="container"><!-- inicio container-->
 
                 <section id="postagens">
-                    <h3>Vinhos</h3>
+                    <!-- <h3>Vinhos</h3> -->
                     
                     <article>
                         <a href="">
@@ -164,7 +163,7 @@
                         </a>
 
                         <div id="botao"><!-- inicio buttão -->
-                                <button class="btn btn-while btn-lg" type="button">Incluir</button>
+                                <button class="btn btn-success btn-lg" type="button">Incluir</button>
                         </div><!--/ fim botão-->
                     </article>
 
@@ -175,7 +174,7 @@
                              <h5>R$23,43</h5>
 
                              <div id="botao"><!-- inicio buttão -->
-                                <button class="btn btn-while btn-lg" type="button">Incluir</button>
+                                <button class="btn btn-success btn-lg" type="button">Incluir</button>
                             </div><!--/ fim botão-->
                         </a>
                     </article>
@@ -187,7 +186,7 @@
                              <h5>R$69,99</h5>
 
                             <div id="botao"><!-- inicio buttão -->
-                                <button class="btn btn-while btn-lg" type="button">Incluir</button>
+                                <button class="btn btn-success btn-lg" type="button">Incluir</button>
                             </div><!--/ fim botão-->
                         </a>
                     </article>
