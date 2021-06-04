@@ -19,7 +19,7 @@
 
         <section class="row">
         <?php for ($x = 0; 12 > $x; $x++){ ?>
-            <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 p-3" >
+            <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 p-3">
                 <div class="w-100 p-2" style="border: 1px solid #ccc; border-radius:8px">
                     
                     <img class="img-fluid" src="../img/vinho1.jpg">
