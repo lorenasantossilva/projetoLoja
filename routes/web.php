@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use \App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,10 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [HomeController::class, 'index'])->name('index');
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/teste', function () {
     return view('teste');
@@ -23,10 +21,6 @@ Route::get('/teste', function () {
 
 Route::get('/cadastro-produtos', function () {
     return view('cadastroProdutos');
-});
-
-Route::get('/listagem-produtos', function () {
-    return view('listagemProdutos');
 });
 
 Route::get('/carrinho', function () {

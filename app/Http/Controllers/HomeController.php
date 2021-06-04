@@ -10,7 +10,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $produto = Produto
+        $produto = Produtos::get();
+        return view('listagemProdutos')->with(compact('produto'));
     }
 
 
