@@ -17,10 +17,10 @@
     <body>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-5 bg-info mt-5 p-5"> 
+                <div class="col-5 bg-info mt-5 p-5" style="border-radius: 8px"> 
                 <form id=formulario>
                     <div id="cadastro">
-                        <h4 class="text-white">Cadastro de Produto</h4>
+                        <h4 class="text-white text-center">Cadastro de Produto</h4>
                         <div class="form-group mb-2">
                             <label for="nome">Nome:</label>
                             <input class="form-control" type="text" id="nome">
@@ -41,7 +41,7 @@
                         </div>  
                     </div>
 
-                    <div class="botao">
+                    <div class="text-center">
                         <button class="btn btn-dark btn-sm mt-3" type="submit">Cadastrar produto</button>
                     </div>
 
