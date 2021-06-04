@@ -21,7 +21,7 @@
 
         <style>
             body {
-                background: #fff url(../img/fundo.png) repeat-x;
+                /* background: #fff url(../img/fundo.png) repeat-x; */
                 font-family: 'Nunito', sans-serif;
                 text-align: left;
                 text: 10px;
@@ -30,12 +30,9 @@
             h1{
                 color: #fff;
             }
-            
             h2{
-                /* color:#fff; */
                 font: 2em;
-                text-align: center;
-                /* text-transform: uppercase; */
+                text-align: center; 
             }
 
             h4{
@@ -48,9 +45,8 @@
                text-align: left;
                position: auto;
                width:center;
-               top:10%;
+               top:50%;
                padding: 20px;
-              
            }
            #produto {
                 color:#A52A2A;
@@ -58,13 +54,10 @@
                 margin: 15px 5px;
                 text-align: center;
             }
-
-            
             #logo{
                 background: url(../img/logo.png) no-repeat;
-                
+                text-align: right;   
             }
-
             #logo h1 {
                 float: left;
                 text-transform: uppercase;
@@ -72,7 +65,6 @@
                 width: 70px;
                 height: 20px;
             }
-
             #logo a {
                 width: 60px;
                 height: 40px;
@@ -84,10 +76,12 @@
             #valor, #totalCompras{
                 padding: 80px;
             }
-
             header{
-                padding: 50px o;
-                height: 180px;
+                padding: 80px o;
+                height: 150px;
+                width: -600px;
+                float: auto;
+                background: #fff url(../img/fundo.png) repeat-x;
             }
             nav ul{
                 list-style: none;
@@ -101,8 +95,6 @@
             nav ul li a:hover{
                 border-bottom: 1px solid #fff;
             }
-            
-
             nav ul li a:link {
                 display: block;
                 margin-right: 10px;
