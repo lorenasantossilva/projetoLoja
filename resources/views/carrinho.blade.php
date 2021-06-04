@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
                     <?php for ($x = 0; 10 > $x; $x++){ ?>
-                    <div class="row p-0 m-0" style="border-bottom: 2px solid #333">
+                    <div class="row p-0 m-0 mb-3" style="border: 1px solid #ccc; border-radius:8px">
                         <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                             <div class="float-end w-75 p-3">
                                 <h1 class="h5">Vinhox Vale D. Mawria 750ml</h1>
