@@ -39,6 +39,10 @@
                             <label for="peso">Peso:</label>
                             <input class="form-control" type="text" id="peso">
                         </div>  
+                        <div class="form-group">
+                            <label for="valor">Valor:</label>
+                            <input class="form-control" type="text" id="valor">
+                        </div> 
                     </div>
 
                     <div class="text-center">
