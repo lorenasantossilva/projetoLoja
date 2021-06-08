@@ -14,6 +14,7 @@ use \App\Http\Controllers\HomeController;
 */
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
+Route::get('/carrinho/{tipo}/{action/{id}/{quantidade?}', [HomeController::class, 'carrinho'])->name('carrrinho');
 
 Route::get('/teste', function () {
     return view('teste');
