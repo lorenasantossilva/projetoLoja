@@ -28,10 +28,11 @@ class CarrinhoController extends Controller
                 return view('carrinho')->with(compact('produtosCarrinhos', 'valorTotal'));
 
             }else{
-                setcookie("token", "xnxjnwxhwn545456", time() + (86400 * 1), "/"); // 86400 = 1 day
+                $token = rand(1,1000);
+                setcookie("token", $token, time() + (86400 * 1), "/"); // 86400 = 1 day
 
-                $produtosCarrinhos = Carrinho::where('token', $_COOKIE['token'])->get();
-                $valorTotal = Carrinho::select(\DB::raw('sum(valor) as valor_total'))->where('token', $_COOKIE['token'])->get();
+                $produtosCarrinhos = Carrinho::where('token', $token)->get();
+                $valorTotal = Carrinho::select(\DB::raw('sum(valor) as valor_total'))->where('token', $token)->get();
                 $valorTotal = $valorTotal[0]->valor_total;
                 return view('carrinho')->with(compact('produtosCarrinhos', 'valorTotal'));
             }
