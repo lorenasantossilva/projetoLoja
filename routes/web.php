@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\HomeController;
+use \App\Http\Controllers\CarrinhoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +15,7 @@ use \App\Http\Controllers\HomeController;
 */
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
-Route::get('/carrinho/{tipo}/{action/{id}/{quantidade?}', [HomeController::class, 'carrinho'])->name('carrrinho');
+Route::get('/carrinho/{id?}', [CarrinhoController::class, 'index'])->name('carrinho');
 
 Route::get('/teste', function () {
     return view('teste');

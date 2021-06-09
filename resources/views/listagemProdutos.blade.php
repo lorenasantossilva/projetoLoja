@@ -17,83 +17,6 @@
 </head>
 
 <body >
-<div id="menu_carrinho" style="z-index: 999!important;">
-    <input type="checkbox" id="control-nav">
-    <label for="control-nav" class="control-nav">
-        <?php if (count($_SESSION['produtos']) == 0) { ?>
-        <a href="carrinho.php">
-            <img src="imagens/icone_cesta.png">
-        </a>
-        <span id="qtd">0</span>
-        <?php } else { ?>
-        <img src="imagens/icone_cesta.png">
-        <span id="qtd"><?= count($_SESSION['produtos']) ?></span>
-        <?php } ?>
-    </label>
-    <?php if (count($_SESSION['produtos']) > 0) { ?>
-    <label for="control-nav" class="control-nav-close"></label>
-    <nav id="list_carrinho">
-
-        <h4>Itens Adicionados</h4>
-        <div id="max_height_carrinho">
-            <?php
-            $valorTotalCompra = 0;
-            foreach ($_SESSION['produtos'] as $idProduto => $key) {
-            $query = "select * from produto where id = {$idProduto}";
-            $result = $action->query_db($query);
-            if ($action->result_quantidade($result) > 0) {
-            $produto = array_map_deep($action->array_db($result)[0], 'utf8_encode');
-            $total = $key * $produto['valor_item'];
-            $valorTotalCompra += $total;
-            ?>
-            <div id="boxCarrinho<?= $produto['id']; ?>" class="box_carrinho">
-                <div class="capa_carrinho">
-                    <img src='https://clickacai.com.br/extranet/files/venda_config/<?= $produto['id'] ?>/capa.jpg' alt='<?= $produto['titulo'] ?>' title='<?= $produto['titulo'] ?>'>
-                </div>
-                <div class="desc_carrinho">
-                    <h3><?= $produto['titulo'] ?></h3>
-                    <form>
-                        <div class="qtd_carrinho_lateral">
-
-                        <!-- <input type="button" value="-" onclick="menos(<?= $produto['id']; ?>)" class="menos">-->
-
-                        <!--  <input name="quantidade" type="text" value="<?= $key ?>" size="3" maxlength="3" id="<?= $produto['id']; ?>" readonly> -->
-
-                        <!--  <input type="button" value="+" onclick="mais(<?= $produto['id']; ?>)" class="mais">-->
-
-
-                            <input type="button" value="-" onclick="remProduto('<?= $produto['id']; ?>', false)" class="menos">
-
-                            <input name="quantidade" type="text" value="<?= $key ?>" size="3" maxlength="3" id="<?= $produto['id']; ?>" readonly>
-
-                            <input type="button" value="+" onclick="addProduto('<?= $produto['id']; ?>', false)" class="mais">
-
-                        </div>
-                    </form>
-
-                    <strong>R$ <span id="valorProduto<?= $produto['id']; ?>"><?= number_format($total, 2, ',', '.') ?></span></strong>
-                </div>
-            </div>
-            <?php
-            }
-            }
-            ?>
-        </div>
-        <div id="sub_total_carrinho">
-            <div style="overflow:auto;">
-                <span>SUBTOTAL</span>
-                <strong>R$ <b id="valorTotalCarrinho"> <?= number_format($valorTotalCompra, 2, ',', '.') ?></</b></strong>
-            </div>
-            <a href="{{ route('conteudo.listar', ['categoria' => $util->url('noticias') ]) }}">FINALIZAR COMPRA</a>
-        </div>
-
-
-    </nav>
-    <?php
-    }
-    ?>
-</div>
-
 <!-- JS QUANTIDADE INPUT -->
 <script type="text/javascript">
     function id(el) {
@@ -113,7 +36,6 @@
 <!-- JS QUANTIDADE INPUT -->
 
 <div class="container">
-
         <section class="row">
             @foreach($produto as $item)
             <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 p-3">
@@ -124,7 +46,7 @@
                     <span class="d-block text-center">R$ {{$item->valor}}</span>
 
                     <div class="text-center">
-                        <a href="#" onclick="addProduto('{{$item->id}}')" class="btn btn-success btn-sm mt-2">Incluir produto</a>
+                        <a href="{{route('carrinho', ['id'=> $item->id])}}" class="btn btn-success btn-sm mt-2">Incluir produto</a>
                     </div>
                 </div>
             </div>
